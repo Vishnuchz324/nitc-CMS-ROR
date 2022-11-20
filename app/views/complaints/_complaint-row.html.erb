@@ -1,0 +1,24 @@
+<tr id="<%= dom_id complaint %>">
+  <td>
+    <%= id+1 %>
+  </td>
+  <td>
+    <%= complaint.title %>
+  </td>
+  <td>
+    <%= complaint.description %>
+  </td>
+  <td>
+    <%= complaint.status %>
+  </td>
+  <td>
+    <%= complaint.numVotes %>
+  </td>
+  <td class="d-flex justify-content-center ">
+    <%= button_to raw('<i class="fa-solid fa-eye"></i>'), complaint,:method => "get",:class=>'btn btn-primary
+      rounded-circle' %>
+      <span class="mx-2"></span>
+      <%= button_to raw('<i class="fa-solid fa-pencil"></i>'), edit_complaint_url(:id => complaint.id),:method =>
+        "get",:class=>'btn btn-primary rounded-circle' %>
+  </td>
+</tr>

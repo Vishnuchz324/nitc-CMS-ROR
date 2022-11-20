@@ -1,0 +1,27 @@
+
+
+
+    <h1>Complaints</h1>
+
+
+    <div class="my-3 d-flex justify-content-end">
+      <%= button_to 'New Complaint' , new_complaint_path,:method=> "get",:class=>'btn btn-primary' %>
+    </div>
+
+    <table id="complaints" class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+          <th scope="col">Num Votes</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @complaints.each_with_index do |complaint,index| %>
+          <%= render 'complaint-row' , complaint:complaint,id:index %>
+      </tbody>
+      <% end %>
+        </div>

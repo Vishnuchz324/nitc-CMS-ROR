@@ -1,0 +1,18 @@
+<div class="border p-3 container">
+  <div class="d-flex justify-content-between">
+    <span>
+      <h2 class="text-center">Editing complaint</h2>
+    </span>
+
+    <span>
+      <%= button_to raw('<i class="p-1 fa-solid fa-caret-left"></i>') , complaints_url,:method=>
+        "get",:class=>'btn
+        btn-primary border rounded-circle' %>
+    </span>
+  </div>
+
+
+  <%= render "edit-form" , complaint: @complaint %>
+    <br>
+
+</div>
